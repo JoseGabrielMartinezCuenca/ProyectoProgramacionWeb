@@ -1,0 +1,45 @@
+body{
+  margin 0;
+  background: url(peyito.jpg);
+  background-size: 1700px;;
+  background-position: center;
+}
+
+h1{
+  font-family: arial; color: white;
+  padding: 0px;
+  font-style: oblique;
+  font-size: 60px;
+}
+
+h2{
+font-family: verdana; color: white;
+margin-top: -45px;
+font-style: italic;
+}
+h3{
+margin-left: 1200px;
+margin-top: -200px;
+}
+p{
+  font-family: arial; color: white;
+}
+A{
+  font-family: arial; color: white; font-style: oblique; font-weight: lighter;
+}
+button{
+  padding: 5px;
+  width: 400px;
+}
+section{
+margin-top: 200px;
+height: 300px;
+width: 500px;
+margin-left: 10px;
+padding: 0px;}
+
+.a{
+margin-top: 200px;
+margin-left: 100px;
+border: color: black;
+}

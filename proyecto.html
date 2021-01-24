@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Proyecto</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width= device-width">
+<link rel="stylesheet" href="css.css" type="text/css" media="all">
+</head>
+<body>
+
+</body>
+<h1> PETWORLD </h1>
+<h2> Lo mejor para tu mascota <br> EN ESPAÑOL</h2>
+<br>
+<p>En esta pagina WEB encontraras consejos para tus mascotas <br> asi como tambien podras registrar a tu mascota <br></p>
+<p>
+  <a>OPCIONES:</a>
+  <br><br>
+  Buscar Raza: <input type="text" id="raza" size="10" onkeyup="sugerencia(this.value)" />
+  <p>sugerencia: <span id="resultado"></span></p>
+
+
+  <nav>
+  <lib>
+<li>
+  <button id="boton" type="button" onclick="cargar()">CONSEJOS</button>
+</li>
+<li>
+  <button id="botom2" type="button" onclick="cargar2()">EJERCICIO CON MASCOTAS</button>
+</li>
+<li>
+  <button  id="boton3" type="button" onclick="educa()">EDUCA A TU MASCOTA</button>
+</li>
+</lib>
+</nav>
+
+  <h3>
+          <a href="https://www.facebook.com/gabrielcap395/"target="_blank" title="Facebook">
+          <img src="ico1.png" alt="Facebook" width="30" height="30"></td>
+        </a>
+
+    <a href="https://www.instagram.com/"target="_blank" title="instagram">
+    <img src="ico3.png" alt="Twitter" width="30" height="30"></td>
+    </a>
+    <a href="https://twitter.com/?lang=es/"target="_blank" title="Twitter">
+    <img src="ico2.png" alt="Instagram" width="30" height="30"></td></a>
+  </h3>
+<section id="aqui"></section>
+<section id="pro"></section>
+
+</select>
+
+<script>
+
+function cargar(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange=function(){
+if(this.readyState == 4 && this.status == 200){
+  document.getElementById('aqui').innerHTML = this.responseText;
+
+}
+};
+xhttp.open("GET", "consejos.html", true);
+xhttp.send();
+}
+
+function cargar2(){
+var xhttp1=new XMLHttpRequest();
+xhttp1.onreadystatechange=function(){
+  if(this.readyState == 4 && this.status == 200){
+    document.getElementById('aqui').innerHTML=this.responseText;
+  }
+};
+xhttp1.open("GET","ejercicios.html",true);
+xhttp1.send();
+}
+
+function educa(){
+var xhttp2=new XMLHttpRequest();
+xhttp2.onreadystatechange=function(){
+  if(this.readyState == 4 && this.status == 200){
+    document.getElementById('aqui').innerHTML=this.responseText;
+  }
+};
+xhttp2.open("GET","busca.html",true);
+xhttp2.send();
+}
+
+
+
+function sugerencia(str){
+var xhttp9 = new XMLHttpRequest();
+xhttp9.onreadystatechange=function(){
+  if(this.readyState == 4 && this.status == 200){
+    document.getElementById('aqui').innerHTML=this.responseText;
+  }
+};
+xhttp9.open("GET","conectar.php?campo=" + str,true);
+xhttp9.send();
+}
+
+
+/*function ajax(){
+const http = new XMLHttpRequest();
+  const url = 'http://localhost/proyecto1/consejos.html';
+
+  http.onreadystatechange = function(){
+if(this.readyState == 4 && this.status == 200){
+console.log(this.responseText);
+document.getElementById("response").innerHTML = this.responseText;
+}
+  }
+  http.open("GET", url);
+  http.send();
+}
+document.getElementById("boton").addEventListener('click', function(){
+  ajax();
+});*/
+
+  </script>
+
+
+</body>
+</html>
